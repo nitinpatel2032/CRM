@@ -83,12 +83,6 @@ const apiService = {
     saveRootCause: (ticketId, rootCauseData) => api.post(`/tickets/${ticketId}/root-cause`, rootCauseData),
     getTicketReport: (filters) => api.post(`tickets/ticket-report`, filters),
     getAllDropdownValues: () => api.get(`auth/dropdown-values`),
-
-    // PO
-    fetchCompany: (action, Id) => api.post(`/po/masterDropDown`, { action, Id }),
-    addPO: (data) => api.post(`/po/createPO`, data),
-    updatePO: (data) => api.post(`/po/updatePO`, data),
-    changeStatusPO: (data) => api.post(`/po/changePOStatus`, data)
 };
 
 export default apiService;
