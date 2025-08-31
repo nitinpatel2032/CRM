@@ -5,16 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { PermissionsProvider } from '../src/context/PermissionsContext';
 import './App.css';
-import { POProvider } from '../src/context/POcontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <POProvider>
-    <PermissionsProvider>
-      <App />
-    </PermissionsProvider>
-    </POProvider>
+  <PermissionsProvider>
+    <App />
+  </PermissionsProvider>
   // </React.StrictMode>
 );
 

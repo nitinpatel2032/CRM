@@ -11,11 +11,6 @@ import UserManagement from './pages/UserManagement';
 import ProjectManagement from './pages/ProjectManagement';
 import TicketManagement from './pages/TicketManagement';
 import TicketDetail from './pages/TicketDetails/TicketDetail';
-import AddPO from './pages/PO/AddPO';
-// import {ViewPO} from './pages/PO/ViewPO';
-import CreateInvoice from './pages/Invoice/CreateInvoice';
-import AddInvoice from './pages/Invoice/AddInvoice';
-import ViewInvoice from './pages/Invoice/ViewInvoice';
 import TicketReport from './pages/TicketReport/Report';
 
 const ProtectedRoute = ({ children }) => {
@@ -41,11 +36,6 @@ function App() {
         <Route path="/tickets/:id" element={<ProtectedRoute><Layout><TicketDetail /></Layout></ProtectedRoute>} />
         <Route path="/ticket-report" element={<ProtectedRoute><Layout><TicketReport /></Layout></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/login" />} />
-        <Route path="/AddPO" element={<Layout><AddPO /></Layout>} />
-        {/* <Route path="/ViewPO" element={<Layout><ViewPO /></Layout>} /> */}
-        <Route path="/CreateInvoice" element={<Layout><CreateInvoice /></Layout>} />
-        <Route path="/AddInvoice" element={<Layout><AddInvoice /></Layout>} />
-        <Route path="/ViewInvoice" element={<Layout><ViewInvoice /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
